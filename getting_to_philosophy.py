@@ -34,7 +34,7 @@ def get_to_philosophy(initial_address, max_iterations=100, verbose=False):
   if verbose:
    print(current_address)
   if current_address in pages_visited:
-   print("Boucle de " + str(iteration) + " chaînes")
+   print("Boucle de " + str(iteration - pages_visited.index(current_address)) + " nœuds trouvée à partir de "+str(pages_visited.index(current_address))+" itérations")
    return
   elif current_address.lower() == target_page.lower():
    print(str(iteration) + " itérations pour arriver à la page Philosophie")
